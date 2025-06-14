@@ -1,0 +1,30 @@
+# Terraform
+*.tfstate
+*.tfstate.backup
+.terraform/
+terraform.tfvars
+*.tfvars.json
+
+# Docker
+__pycache__
+*.pyc
+*.pyo
+*.pyd
+.Python
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+*.log
+docker-compose.override.yml
+.DS_Store
+
+# SSH
+*.pem
+*.pub
+/id_rsa
+/id_rsa.pub
+/known_hosts
+/config
+/ssh/
