@@ -12,14 +12,14 @@ resource "aws_ecr_repository" "mysql" {
 
 resource "aws_key_pair" "assignment_key" {
   key_name   = "assignment_1"
-  public_key = file("~/.ssh/assignment_1.pub")
+  public_key = file("/home/ec2-user/environment/clo835_assignment_1/terraform/assignment_1.pub")
 }
 
 
 resource "aws_instance" "ec2" {
   ami           = "ami-0953476d60561c955" # Amazon Linux 2
   instance_type = "t2.micro"
-  key_name      = "assignment1-key" 
+  key_name      = "assignment_1" 
   subnet_id     = "subnet-0ac68eca994e8eeeb"         # Replace with default VPC public subnet ID
   vpc_security_group_ids = [aws_security_group.ec2_sg.id]
   tags = { Name = "Assignment1-EC2" }
